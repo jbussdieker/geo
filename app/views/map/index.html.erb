@@ -21,6 +21,7 @@
             myOptions);
 
         <% @images.each do |image| %>
+        <% if image.lat then %>
         var marker = new google.maps.Marker({
           position: new google.maps.LatLng(<%= image.lat %>, <%= image.lng %>), 
           map: map,
@@ -28,6 +29,7 @@
           id: <%= image.id %>
         });
         attachEvent(marker);
+        <% end %>
         <% end %>
       }
 
