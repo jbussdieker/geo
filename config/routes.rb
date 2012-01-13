@@ -1,4 +1,7 @@
 Geo::Application.routes.draw do
+  get "location/get"
+  get "map" => "map#index"
+  resources :images
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

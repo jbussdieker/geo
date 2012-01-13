@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @image.name %>
+</p>
+
+<p>
+  <b>Lng:</b>
+  <%= @image.lng %>
+</p>
+
+<p>
+  <b>Lat:</b>
+  <%= @image.lat %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <br><img width="320px" src="/data/<%= @image.filename %>"></img>
+</p>
+
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

@@ -17,8 +17,8 @@ development:
   encoding: unicode
   database: geo_development
   pool: 5
-  username: geo
-  password:
+  username: jbussdieker_admin
+  password: triptamine
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -43,13 +43,13 @@ test:
   encoding: unicode
   database: geo_test
   pool: 5
-  username: geo
-  password:
+  username: jbussdieker_admin
+  password: triptamine
 
 production:
   adapter: postgresql
   encoding: unicode
   database: geo_production
   pool: 5
-  username: geo
-  password:
+  username: jbussdieker_admin
+  password: triptamine

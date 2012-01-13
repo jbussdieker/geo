@@ -7,3 +7,23 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+function locationUpdate(position) {
+  document.getElementById("lng").value = position.coords.longitude;
+  document.getElementById("lat").value = position.coords.latitude;
+  document.getElementById("status").innerHTML = position.coords.accuracy;
+}
+
+function locationError(error) {
+  document.getElementById("status").innerHTML = "Error getting location";
+}
+
+// Request repeated updates.
+var watchId = navigator.geolocation.watchPosition(locationUpdate, locationError);
+
+function buttonClickHandler() {
+  // Cancel the updates when the user clicks a button.
+  navigator.geolocation.clearWatch(watchId);
+  console.log("Boom3!");
+}
+
